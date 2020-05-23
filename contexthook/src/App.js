@@ -15,14 +15,13 @@ export class App extends Component {
 
     async componentDidMount() {
         const fetchedData = await fetchData();
-        //console.log(fetchedData);
+        console.log(fetchedData);
         this.setState({data:fetchedData});
     }
 
     render() {
-
         const {data} = this.state;
-        //console.log(data);
+        
         return (
             <div className={styles.container}>
                 <Cards data = {data}/>
